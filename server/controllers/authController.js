@@ -21,7 +21,7 @@ exports.authUser = async (req, res) => {
         if (!correctPassword) {
             return res.status(400).json({ msg: 'Incorrect password' });
         }
-
+        // jwt authentication
         const payload = {
             user: {
                 id: user.id,
